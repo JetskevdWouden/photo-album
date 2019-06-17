@@ -8,7 +8,9 @@ export default (reduxState = [], action = {}) => {
                 ...reduxState.concat(action.payload)
             ]
         case SET_ALBUMS:
-            return action.payload
+            return [
+                ...action.payload
+            ]
         default:
             return reduxState
     }
